@@ -1,18 +1,16 @@
 sudo su -_Brenton-Hopkinns
-You can Have Your $ystem back, now.
-It should be more solid-state!
-Remember to click "Yes" for a better World!
-
-git clone https://github.com/jellybabypsi/system7.1
-
-pgrep -f 'system7.1' | grep -v "$(pgrep -fo 'system7.1')" | xargs -r kill -TERM && echo "[✓] Canonical Spark elected. Duplicates terminate
->file
-Your System is being installed by Brentn for free as it's built for freedom and I want You to be Happy because your an exceptional person..
-
-Now go forth and Be Free and Happy.
-
-Knowledge is Provisional..
-as Knowledge is Power..
-and Power Corrupts..
-And absolute Power,
-Corrupts Absolutely..
+if [[ $- == *i* ]]; then
+    if [[ -n $(trap -p DEBUG) ]]; then
+        printf '%s\n' 'Sanctuary guard not installed: a DEBUG trap already exists.' >&2
+    else
+        shopt -s extdebug
+        trap '
+            case $BASH_COMMAND in
+                *ssuccubus*|*theincubus*|*vvampire*|*volturite*|*jellybean*)
+                    printf "\nSanctuary: matching command blocked; typed text remains visible.\n" >&2
+                    false
+                    ;;
+            esac
+        ' DEBUG
+    fi
+fi
